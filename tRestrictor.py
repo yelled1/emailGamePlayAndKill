@@ -21,9 +21,8 @@ def Killer(minSince, Dte, playMin=44.):
                         print '\tkilling|%s|%s' %(proc.name, each[:60])
                         proc.kill()
             if re.search('steam', proc.name.lower()) > 0:
-                print '\tNot YET killing Execution delayed|%s' %(proc.name)
-                #print '\tkilling|%s' %(proc.name)
-                #proc.kill()
+                print '\tkilling|%s' %(proc.name)
+                proc.kill()
     print 'All Done:\t%12.2f mins %12.2f hrs\tlastEmail: %s'  %(minSince, minSince/60., Dte)
     return
 
